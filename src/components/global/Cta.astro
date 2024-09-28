@@ -1,41 +1,45 @@
-<div class=" p-32 rounded-3xl items-center">
-      
-      <!-- SVG Icon -->
-      <div class="flex items-center justify-center mb-8">
-        <svg class="h-20" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z" class="ccustom" fill="#283CFF"></path>
-          <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#5263FF"></path>
-          <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#808CFF"></path>
-        </svg>
-      </div>
+<section class="max-w-7xl mx-auto relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 rounded-4xl">
+  <!-- Animated SVG Background -->
+  <div class="absolute inset-0 pointer-events-none">
+    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" style="stop-color:rgba(255, 255, 255, 0.4); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(255, 255, 255, 0); stop-opacity:0" />
+        </radialGradient>
+      </defs>
+      <circle cx="50" cy="50" r="40" fill="url(#grad1)">
+        <animate attributeName="r" from="30" to="50" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" from="0.4" to="0.1" dur="6s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
 
-      <!-- Headline and Description -->
-    <div class="max-w-xl mx-auto text-center">
-      <h1 class="text-4xl tracking-tight font-medium text-black md:text-5xl font-display">
-        We’re truly passionate about your vision
-      </h1>
-      <p class="text-base mt-4 text-gray-500">
-        Our team will handle the technical development, infrastructure integration, and any support needed during the rollout.
+  <div class="relative z-10 mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-48 mt-8">
+    <div class="text-center max-w-4xl mx-auto">
+      <p class="text-4xl tracking-tight font-semibold text-white md:text-5xl font-display">
+        Payments for a Digital World
+      </p>
+      <p class="text-gray-200 lg:text-xl max-w-2xl mt-4 mx-auto text-base">
+        Upgrade the way you collect, convert, and send money using licensed modern and conventional payment systems.
       </p>
     </div>
 
-      <!-- Call to Action Buttons -->
-      <div class="flex justify-center gap-5 mt-10 flex-col sm:flex-row">
-        <!-- First Button (Secondary) -->
-        <a
-          class="items-center justify-center text-white bg-accent-500 border-gray-300 h-12 font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex transition duration-200 lg:w-auto px-8 py-3 text-center w-full border hover:bg-gray-200 hover:text-black"
-          href="https://github.com/michael-andreuzza/astrosaas"
-          >About us
-        </a>
+    <div class="flex justify-center gap-4 mt-10 flex-col sm:flex-row">
+      <a
+        class="items-center justify-center h-12 font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex duration-200 bg-white text-black lg:w-auto px-6 py-3 text-center border-2 border-white hover:bg-transparent hover:border-white hover:text-white transition-all"
+        href="https://github.com/michael-andreuzza/astrosaas"
+      >
+        About Us
+      </a>
 
-        <!-- Second Button (Primary) -->
-        <a
-          class="items-center justify-center h-12 font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black transition duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-8 py-3 text-center text-white w-full hover:border-black"
-          href="https://lexingtonthemes.com"
-          >Talk to us &nbsp; &rarr;
-        </a>
-      </div>
-
+      <a
+        class="items-center justify-center h-12 font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black duration-200 focus-visible:ring-black hover:bg-transparent hover:border-white hover:text-white lg:w-auto px-6 py-3 text-center text-white transition-all"
+        href="https://lexingtonthemes.com"
+      >
+        Talk to Us &nbsp; &rarr;
+      </a>
     </div>
   </div>
-</div>
+</section>
+ 
