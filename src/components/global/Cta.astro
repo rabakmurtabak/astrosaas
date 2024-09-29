@@ -1,20 +1,68 @@
+<style>
+  /* Parallax shapes */
+  .parallax-shapes {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 15s ease-in-out infinite;
+    opacity: 0.7;
+  }
+
+  .circle-small {
+    width: 50px;
+    height: 50px;
+    top: 30%;
+    left: 20%;
+    animation-duration: 12s;
+  }
+
+  .circle-medium {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 80%;
+    animation-duration: 18s;
+  }
+
+  .circle-large {
+    width: 120px;
+    height: 120px;
+    top: 80%;
+    left: 50%;
+    animation-duration: 22s;
+  }
+
+  /* Animation for floating effect */
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(30px, -30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+</style>
+
 <section class="max-w-7xl mx-auto relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 rounded-4xl">
-  <!-- Animated SVG Background -->
-  <div class="absolute inset-0 pointer-events-none">
-    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <defs>
-        <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-          <stop offset="0%" style="stop-color:rgba(255, 255, 255, 0.4); stop-opacity:1" />
-          <stop offset="100%" style="stop-color:rgba(255, 255, 255, 0); stop-opacity:0" />
-        </radialGradient>
-      </defs>
-      <circle cx="50" cy="50" r="40" fill="url(#grad1)">
-        <animate attributeName="r" from="30" to="50" dur="6s" repeatCount="indefinite" />
-        <animate attributeName="opacity" from="0.4" to="0.1" dur="6s" repeatCount="indefinite" />
-      </circle>
-    </svg>
+  
+  <!-- Parallax Floating Shapes -->
+  <div class="parallax-shapes">
+    <div class="circle circle-small"></div>
+    <div class="circle circle-medium"></div>
+    <div class="circle circle-large"></div>
   </div>
 
+  <!-- Content Section -->
   <div class="relative z-10 mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-48 mt-8">
     <div class="text-center max-w-4xl mx-auto">
       <p class="text-4xl tracking-tight font-semibold text-white md:text-5xl font-display">
@@ -42,4 +90,3 @@
     </div>
   </div>
 </section>
- 
