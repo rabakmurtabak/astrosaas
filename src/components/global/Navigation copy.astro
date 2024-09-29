@@ -1,0 +1,135 @@
+<section class="bg-white border-b border-white/5 sticky top-0 w-full z-50">
+  <div class="w-full mx-auto md:px-12 px-8 max-w-7xl lg:px-16">
+    <div
+      x-data="{ open: false, servicesOpen: false, featuresOpen: false }"
+      class="flex flex-col w-full py-5 mx-auto md:items-center md:justify-between md:flex-row md:px-6"
+    >
+      <div class="flex flex-row items-center justify-between lg:justify-start">
+        <a href="/" class=" text-black inline-flex items-center gap-3">
+          <svg class="h-4" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z" class="ccustom" fill="#283CFF"></path>
+            <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#5263FF"></path>
+            <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#808CFF"></path>
+          </svg>
+          <span class="font-bold font-display">Ceus Capital</span>
+        </a>
+        <button
+          @click="open = !open"
+          class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black md:hidden"
+        >
+          <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path :class="{ 'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav
+        :class="{ 'flex': open, 'hidden': !open }"
+        class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row"
+      >
+        <a class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 transition duration-300 ease-in-out lg:ml-auto" href="/">
+          Home
+        </a>
+<!-- Flydown Menu for Help Center -->
+<div class="group">
+  <a
+    class="z-60 px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 transition duration-300 ease-in-out cursor-pointer flex items-center"
+  >
+    Solutions
+    <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </a>
+
+  <div
+  class="bg-white backdrop-blur-lg absolute left-0 right-0 top-full w-full p-8 z-60 transition-all duration-300 transform opacity-0 -translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 invisible group-hover:visible max-h-96 overflow-y-auto"
+  > <!-- Grid Layout for Desktop and Mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-xl mx-8 md:mx-8 place-items-center items-start px-4 md:px-20">
+      
+      <!-- Column 1 - Benefits -->
+      <div class="max-w-xl">
+        <h1 class="text-4xl tracking-tight font-medium text-black md:text-5xl font-display">
+          Looking for more information?
+        </h1>
+        <p class="text-base mt-20 text-gray-500">
+          We’re bridging the gaps in cross-border payments, between fiat & digital currencies and web2 & web3.
+        </p>
+      </div>
+
+      <!-- Column 2 - Optimize Processes -->
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-4">For your clients</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3 p-4 rounded-xl hover:bg-gray-100 hover:shadow-lg transition duration-300 ease-in-out">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12a8 8 0 1 1 -8 -8"></path>
+              <path d="M12 4v8"></path>
+            </svg>
+            <div>
+              <p class="font-semibold">
+                <a href="/deposit-withdrawal" class="font-semibold hover:text-accent-500 transition duration-300 ease-in-out">Deposit and Withdrawal</a>
+              </p>
+              <p class="text-gray-500 text-sm">This feature allows your users to deposit various cryptocurrencies into their accounts</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3 p-4 rounded-xl hover:bg-gray-100 hover:shadow-lg transition duration-300 ease-in-out">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 21l4 -4"></path>
+              <path d="M12 16l-8 -8"></path>
+            </svg>
+            <div>
+              <p class="font-semibold">
+                <a href="/on-off-ramping" class="font-semibold hover:text-accent-500 transition duration-300 ease-in-out">On / Off Ramping</a>
+              </p>
+              <p class="text-gray-500 text-sm">This functionality enables customers to convert their crypto into fiat currencies</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3 - Collaboration -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">For your business</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3 p-4 rounded-xl hover:bg-gray-100 hover:shadow-lg transition duration-300 ease-in-out">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12a8 8 0 1 1 -8 -8"></path>
+              <path d="M12 4v8"></path>
+            </svg>
+            <div>
+              <p class="font-semibold"><a href="/deposit-withdrawal" class="hover:text-accent-400 transition duration-300 ease-in-out">Payment Gateway</a></p>
+              <p class="text-gray-500 text-sm">A crypto payment gateway that allows businesses to accept payments in cryptocurrency</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+        <a class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 transition duration-300 ease-in-out" href="/#lol">Pricing</a>
+
+        <a class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 transition duration-300 ease-in-out" href="/faq">FAQ</a>
+
+
+        <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
+          <a
+            href="/signup"
+            class="block px-4 py-2 mt-2 text-sm font-medium text-black md:mt-0 hover:text-accent-400 transition duration-300 ease-in-out focus:outline-none focus:shadow-outline"
+          >
+            Sign up
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center h-8 justify-center px-4 py-2 text-sm font-medium text-black bg-gray-100 rounded-lg group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-50 active:bg-gray-200 active:text-accent-400 focus-visible:outline-black"
+          >
+            Contact Us
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
